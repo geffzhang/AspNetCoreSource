@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>.NET Core hosting and startup infrastructures for applications.</Description>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>hosting</PackageTags>
+    <IsPackable>true</IsPackable>
+    <IsShipping>true</IsShipping>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Configuration\Config.CommandLine\src\Microsoft.Extensions.Configuration.CommandLine.csproj" />
+    <ProjectReference Include="..\..\..\Configuration\Config.EnvironmentVariables\src\Microsoft.Extensions.Configuration.EnvironmentVariables.csproj" />
+    <ProjectReference Include="..\..\..\Configuration\Config.UserSecrets\src\Microsoft.Extensions.Configuration.UserSecrets.csproj" />
+    <ProjectReference Include="..\..\..\DependencyInjection\DI\src\Microsoft.Extensions.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\..\FileProviders\Physical\src\Microsoft.Extensions.FileProviders.Physical.csproj" />
+    <ProjectReference Include="..\..\..\Logging\Logging.Console\src\Microsoft.Extensions.Logging.Console.csproj" />
+    <ProjectReference Include="..\..\..\Logging\Logging.Debug\src\Microsoft.Extensions.Logging.Debug.csproj" />
+    <ProjectReference Include="..\..\..\Logging\Logging.EventLog\src\Microsoft.Extensions.Logging.EventLog.csproj" />
+    <ProjectReference Include="..\..\..\Logging\Logging.EventSource\src\Microsoft.Extensions.Logging.EventSource.csproj" />
+    <ProjectReference Include="..\..\..\Logging\Logging\src\Microsoft.Extensions.Logging.csproj" />
+    <ProjectReference Include="..\..\Abstractions\src\Microsoft.Extensions.Hosting.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

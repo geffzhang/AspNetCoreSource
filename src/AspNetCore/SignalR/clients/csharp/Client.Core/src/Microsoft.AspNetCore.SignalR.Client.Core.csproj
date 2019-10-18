@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Client for ASP.NET Core SignalR</Description>
+    <TargetFrameworks>netstandard2.1</TargetFrameworks>
+    <RootNamespace>Microsoft.AspNetCore.SignalR.Client</RootNamespace>
+    <IsShippingPackage>true</IsShippingPackage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(SignalRSharedSourceRoot)AwaitableThreadPool.cs" Link="AwaitableThreadPool.cs" />
+    <Compile Include="$(SignalRSharedSourceRoot)ForceAsyncAwaiter.cs" Link="ForceAsyncAwaiter.cs" />
+    <Compile Include="$(SignalRSharedSourceRoot)PipeWriterStream.cs" Link="PipeWriterStream.cs" />
+    <Compile Include="$(SignalRSharedSourceRoot)ReflectionHelper.cs" Link="ReflectionHelper.cs" />
+    <Compile Include="$(SignalRSharedSourceRoot)TimerAwaitable.cs" Link="Internal\TimerAwaitable.cs" />
+    <Compile Include="$(SignalRSharedSourceRoot)AsyncEnumerableAdapters.cs" Link="Internal\AsyncEnumerableAdapters.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="$(AspNetCoreSharedSourceRoot)ValueTaskExtensions\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Threading.Channels" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\Extensions\DependencyInjection\DI\src\Microsoft.Extensions.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\Extensions\Logging\Logging\src\Microsoft.Extensions.Logging.csproj" />
+    <ProjectReference Include="..\..\..\..\common\Protocols.Json\src\Microsoft.AspNetCore.SignalR.Protocols.Json.csproj" />
+    <ProjectReference Include="..\..\..\..\common\SignalR.Common\src\Microsoft.AspNetCore.SignalR.Common.csproj" />
+  </ItemGroup>
+
+</Project>

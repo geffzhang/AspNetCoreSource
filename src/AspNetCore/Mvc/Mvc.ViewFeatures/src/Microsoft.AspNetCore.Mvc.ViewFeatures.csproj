@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>
+      ASP.NET Core MVC view rendering features. Contains common types used in most MVC applications as well as view rendering features such as view engines, views, view components, and HTML helpers.
+      Commonly used types:
+      Microsoft.AspNetCore.Mvc.Controller
+      Microsoft.AspNetCore.Mvc.ValidateAntiForgeryTokenAttribute
+      Microsoft.AspNetCore.Mvc.ViewComponent
+    </Description>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>aspnetcore;aspnetcoremvc</PackageTags>
+    <IsAspNetCoreApp>true</IsAspNetCoreApp>
+    <IsShippingPackage>false</IsShippingPackage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(AspNetCoreSharedSourceRoot)Components\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Extensions\WebEncoders\src\Microsoft.Extensions.WebEncoders.csproj" />
+    <ProjectReference Include="..\..\..\Antiforgery\src\Microsoft.AspNetCore.Antiforgery.csproj" />
+    <ProjectReference Include="..\..\..\Components\Authorization\src\Microsoft.AspNetCore.Components.Authorization.csproj" />
+    <ProjectReference Include="..\..\..\Components\Web\src\Microsoft.AspNetCore.Components.Web.csproj" />
+    <ProjectReference Include="..\..\..\DataProtection\Extensions\src\Microsoft.AspNetCore.DataProtection.Extensions.csproj" />
+    <ProjectReference Include="..\..\..\Html\Abstractions\src\Microsoft.AspNetCore.Html.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Middleware\Diagnostics.Abstractions\src\Microsoft.AspNetCore.Diagnostics.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Mvc.Core\src\Microsoft.AspNetCore.Mvc.Core.csproj" />
+    <ProjectReference Include="..\..\Mvc.DataAnnotations\src\Microsoft.AspNetCore.Mvc.DataAnnotations.csproj" />
+  </ItemGroup>
+
+</Project>

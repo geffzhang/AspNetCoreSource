@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <IsAspNetCoreApp>true</IsAspNetCoreApp>
+    <PackageId>Microsoft.AspNetCore.Server.IIS</PackageId>
+    <Description>Provides support for hosting ASP.NET Core in IIS using the AspNetCoreModule.</Description>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>aspnetcore;iis</PackageTags>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NativeAssetsTargetFramework>netcoreapp3.0</NativeAssetsTargetFramework>
+    <IsShippingPackage>false</IsShippingPackage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(AspNetCoreSharedSourceRoot)Buffers.MemoryPool\**\*.cs" LinkBase="Shared\" />
+    <Compile Include="$(AspNetCoreSharedSourceRoot)HttpSys\**\*.cs" LinkBase="Shared\" />
+    <Compile Include="$(AspNetCoreSharedSourceRoot)StackTrace\**\*.cs" LinkBase="Shared\" />
+    <Compile Include="$(AspNetCoreSharedSourceRoot)RazorViews\*.cs" LinkBase="Shared\" />
+    <Compile Include="$(AspNetCoreSharedSourceRoot)ErrorPage\*.cs" LinkBase="Shared\" />
+    <Compile Include="$(ExtensionsSharedSourceRoot)TypeNameHelper\*.cs" LinkBase="Shared\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IO.Pipelines" Version="4.6.0" />
+    <PackageReference Include="System.Security.Principal.Windows" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Extensions\FileProviders\Physical\src\Microsoft.Extensions.FileProviders.Physical.csproj" />
+    <ProjectReference Include="..\..\..\..\Hosting\Abstractions\src\Microsoft.AspNetCore.Hosting.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\..\Http\Authentication.Core\src\Microsoft.AspNetCore.Authentication.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\Http\Http.Extensions\src\Microsoft.AspNetCore.Http.Extensions.csproj" />
+    <ProjectReference Include="..\..\..\Connections.Abstractions\src\Microsoft.AspNetCore.Connections.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

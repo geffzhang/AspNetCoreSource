@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Microsoft.Extensions.FileSystemGlobbing</RootNamespace>
+    <AssemblyName>Microsoft.Extensions.FileSystemGlobbing</AssemblyName>
+    <Description>File system globbing to find files matching a specified pattern.</Description>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <PackageTags>files;filesystem;glob;globbing</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsPackable>true</IsPackable>
+    <IsShipping>true</IsShipping>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(ExtensionsSharedSourceRoot)HashCodeCombiner\*.cs" />
+  </ItemGroup>
+
+</Project>

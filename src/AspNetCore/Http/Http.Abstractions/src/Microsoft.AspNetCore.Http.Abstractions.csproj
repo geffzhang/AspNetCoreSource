@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+
+    <Description>ASP.NET Core HTTP object model for HTTP requests and responses and also common extension methods for registering middleware in an IApplicationBuilder.
+Commonly used types:
+Microsoft.AspNetCore.Builder.IApplicationBuilder
+Microsoft.AspNetCore.Http.HttpContext
+Microsoft.AspNetCore.Http.HttpRequest
+Microsoft.AspNetCore.Http.HttpResponse</Description>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <IsAspNetCoreApp>true</IsAspNetCoreApp>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>aspnetcore</PackageTags>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <IsShippingPackage>false</IsShippingPackage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(AspNetCoreSharedSourceRoot)PropertyHelper\**\*.cs" />
+    <Compile Include="$(ExtensionsSharedSourceRoot)ParameterDefaultValue\**\*.cs" />
+    <Compile Include="$(ExtensionsSharedSourceRoot)ActivatorUtilities\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Headers\src\Microsoft.Net.Http.Headers.csproj" />
+    <ProjectReference Include="..\..\Http.Features\src\Microsoft.AspNetCore.Http.Features.csproj" />
+  </ItemGroup>
+</Project>

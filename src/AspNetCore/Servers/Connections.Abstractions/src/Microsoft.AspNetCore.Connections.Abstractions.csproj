@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Core components of ASP.NET Core networking protocol stack.</Description>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <IsAspNetCoreApp>true</IsAspNetCoreApp>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>aspnetcore</PackageTags>
+    <NoWarn>CS1591;$(NoWarn)</NoWarn>
+    <IsShippingPackage>true</IsShippingPackage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(ExtensionsSharedSourceRoot)ActivatorUtilities\*.cs" />
+    <Compile Include="$(ExtensionsSharedSourceRoot)ParameterDefaultValue\*.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.0.0" />
+    <PackageReference Include="System.IO.Pipelines" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Http\Http.Features\src\Microsoft.AspNetCore.Http.Features.csproj" />
+  </ItemGroup>
+
+</Project>

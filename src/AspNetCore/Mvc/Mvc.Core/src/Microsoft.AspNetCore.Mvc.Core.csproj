@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>ASP.NET Core MVC core components. Contains common action result types, attribute routing, application model conventions, API explorer, application parts, filters, formatters, model binding, and more.
+Commonly used types:
+Microsoft.AspNetCore.Mvc.AreaAttribute
+Microsoft.AspNetCore.Mvc.BindAttribute
+Microsoft.AspNetCore.Mvc.ControllerBase
+Microsoft.AspNetCore.Mvc.FromBodyAttribute
+Microsoft.AspNetCore.Mvc.FromFormAttribute
+Microsoft.AspNetCore.Mvc.RequireHttpsAttribute
+Microsoft.AspNetCore.Mvc.RouteAttribute</Description>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <IsAspNetCoreApp>true</IsAspNetCoreApp>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>aspnetcore;aspnetcoremvc</PackageTags>
+    <IsShippingPackage>false</IsShippingPackage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(AspNetCoreSharedSourceRoot)ChunkingCookieManager\**\*.cs" />
+    <Compile Include="$(AspNetCoreSharedSourceRoot)CopyOnWriteDictionary\**\*.cs" />
+    <Compile Include="$(AspNetCoreSharedSourceRoot)ObjectMethodExecutor\**\*.cs" />
+    <Compile Include="$(AspNetCoreSharedSourceRoot)PropertyActivator\**\*.cs" />
+    <Compile Include="$(AspNetCoreSharedSourceRoot)PropertyHelper\**\*.cs" />
+    <Compile Include="$(AspNetCoreSharedSourceRoot)RangeHelper\**\*.cs" />
+    <Compile Include="$(AspNetCoreSharedSourceRoot)SecurityHelper\**\*.cs" />
+    <Compile Include="$(ExtensionsSharedSourceRoot)ParameterDefaultValue\*.cs" />
+    <Compile Include="$(ExtensionsSharedSourceRoot)TypeNameHelper\*.cs" />
+    <Compile Include="$(ExtensionsSharedSourceRoot)ValueStopwatch\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\Http\Routing\src\DataSourceDependentCache.cs" Link="Routing\DataSourceDependentCache.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Extensions\DependencyInjection\DI\src\Microsoft.Extensions.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\..\..\Extensions\FileProviders\Abstractions\src\Microsoft.Extensions.FileProviders.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\..\Extensions\Logging\Logging.Abstractions\src\Microsoft.Extensions.Logging.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Hosting\Abstractions\src\Microsoft.AspNetCore.Hosting.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Http\Authentication.Core\src\Microsoft.AspNetCore.Authentication.Core.csproj" />
+    <ProjectReference Include="..\..\..\Http\Http.Extensions\src\Microsoft.AspNetCore.Http.Extensions.csproj" />
+    <ProjectReference Include="..\..\..\Http\Http\src\Microsoft.AspNetCore.Http.csproj" />
+    <ProjectReference Include="..\..\..\Http\Routing.Abstractions\src\Microsoft.AspNetCore.Routing.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Http\Routing\src\Microsoft.AspNetCore.Routing.csproj" />
+    <ProjectReference Include="..\..\..\Middleware\ResponseCaching.Abstractions\src\Microsoft.AspNetCore.ResponseCaching.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Security\Authorization\Policy\src\Microsoft.AspNetCore.Authorization.Policy.csproj" />
+    <ProjectReference Include="..\..\Mvc.Abstractions\src\Microsoft.AspNetCore.Mvc.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+    <AspNetCoreSharedSourceRoot>$(SolutionDir)\src\AspNetCore\Shared\</AspNetCoreSharedSourceRoot>
+    <ExtensionsSharedSourceRoot>$(SolutionDir)\src\Extensions\Shared\src\</ExtensionsSharedSourceRoot>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(SolutionDir)AspNetCore.snk</AssemblyOriginatorKeyFile>
+    <SignalRSharedSourceRoot>$(SolutionDir)\src\AspNetCore\SignalR\common\Shared\</SignalRSharedSourceRoot>
+  </PropertyGroup>
+</Project>

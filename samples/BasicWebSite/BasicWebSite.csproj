@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AspNetCore\DefaultBuilder\src\Microsoft.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\src\AspNetCore\Mvc\Mvc\src\Microsoft.AspNetCore.Mvc.csproj" />
+    <ProjectReference Include="..\..\src\Extensions\Hosting\Hosting\src\Microsoft.Extensions.Hosting.csproj" />
+  </ItemGroup>
+
+</Project>

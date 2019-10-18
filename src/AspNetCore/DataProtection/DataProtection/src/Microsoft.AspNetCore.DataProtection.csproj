@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>ASP.NET Core logic to protect and unprotect data, similar to DPAPI.</Description>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <IsAspNetCoreApp>true</IsAspNetCoreApp>
+    <IsShippingPackage>true</IsShippingPackage>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>aspnetcore;dataprotection</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\shared\src\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Win32.Registry" Version="4.6.0" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="4.6.0" />
+    <PackageReference Include="System.Security.Principal.Windows" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Extensions\DependencyInjection\DI.Abstractions\src\Microsoft.Extensions.DependencyInjection.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\..\Extensions\Hosting\Abstractions\src\Microsoft.Extensions.Hosting.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\..\Extensions\Logging\Logging.Abstractions\src\Microsoft.Extensions.Logging.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\..\Extensions\Options\Options\src\Microsoft.Extensions.Options.csproj" />
+    <ProjectReference Include="..\..\Abstractions\src\Microsoft.AspNetCore.DataProtection.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Cryptography.Internal\src\Microsoft.AspNetCore.Cryptography.Internal.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SuppressBaselineReference Include="Microsoft.AspNetCore.Hosting.Abstractions" />
+  </ItemGroup>
+
+</Project>

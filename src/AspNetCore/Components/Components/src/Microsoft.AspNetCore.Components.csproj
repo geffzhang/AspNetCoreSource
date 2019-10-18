@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <Description>Components feature for ASP.NET Core.</Description>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsShippingPackage>true</IsShippingPackage>
+    <IsAspNetCoreApp>true</IsAspNetCoreApp>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\Shared\src\ArrayBuilder.cs" LinkBase="RenderTree" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Buffers" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="$(ExtensionsSharedSourceRoot)HashCodeCombiner\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Extensions\DependencyInjection\DI.Abstractions\src\Microsoft.Extensions.DependencyInjection.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\..\Extensions\Logging\Logging.Abstractions\src\Microsoft.Extensions.Logging.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

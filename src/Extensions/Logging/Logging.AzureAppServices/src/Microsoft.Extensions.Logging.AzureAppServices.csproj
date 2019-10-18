@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Logger implementation to support Azure App Services 'Diagnostics logs' and 'Log stream' features.</Description>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <IsPackable>true</IsPackable>
+    <IsShipping>true</IsShipping>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Configuration\Config.EnvironmentVariables\src\Microsoft.Extensions.Configuration.EnvironmentVariables.csproj" />
+    <ProjectReference Include="..\..\..\Configuration\Config.Json\src\Microsoft.Extensions.Configuration.Json.csproj" />
+    <ProjectReference Include="..\..\Logging.Abstractions\src\Microsoft.Extensions.Logging.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Logging.Configuration\src\Microsoft.Extensions.Logging.Configuration.csproj" />
+    <ProjectReference Include="..\..\Logging\src\Microsoft.Extensions.Logging.csproj" />
+  </ItemGroup>
+
+</Project>

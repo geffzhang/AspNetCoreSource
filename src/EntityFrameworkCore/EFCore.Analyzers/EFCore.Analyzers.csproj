@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>CSharp Analyzers for Entity Framework Core.</Description>
+    <MinClientVersion>3.6</MinClientVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Microsoft.EntityFrameworkCore.Analyzers</AssemblyName>
+    <RootNamespace>Microsoft.EntityFrameworkCore</RootNamespace>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <NuspecFile>$(MSBuildProjectName).nuspec</NuspecFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Shared\CodeAnnotations.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" PrivateAssets="all" Version="3.3.1" />
+  </ItemGroup>
+
+</Project>

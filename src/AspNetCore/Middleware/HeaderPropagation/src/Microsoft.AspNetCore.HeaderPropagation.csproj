@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>ASP.NET Core middleware to propagate HTTP headers from the incoming request to the outgoing HTTP Client requests</Description>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <IsShippingPackage>true</IsShippingPackage>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>aspnetcore;httpclient</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Extensions\DependencyInjection\DI\src\Microsoft.Extensions.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\..\..\Extensions\HttpClientFactory\Http\src\Microsoft.Extensions.Http.csproj" />
+    <ProjectReference Include="..\..\..\Http\Http\src\Microsoft.AspNetCore.Http.csproj" />
+  </ItemGroup>
+
+</Project>

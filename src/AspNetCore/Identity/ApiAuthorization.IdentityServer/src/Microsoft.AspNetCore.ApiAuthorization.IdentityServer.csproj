@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <Description>ASP.NET Core API Authorization package powered by Identity Server.</Description>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>aspnetcore;apiauth;identity</PackageTags>
+    <HasReferenceAssembly>false</HasReferenceAssembly>
+    <IsShippingPackage>true</IsShippingPackage>
+    <HasReferenceAssembly>false</HasReferenceAssembly>
+    <!-- We are a package that depends on the shared framework, this allows us to
+         avoid errors during restore -->
+    <GenerateErrorForMissingTargetingPacks>false</GenerateErrorForMissingTargetingPacks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Library\IdentityServer4\AspNetIdentity\src\IdentityServer4.AspNetIdentity.csproj" />
+    <ProjectReference Include="..\..\..\..\Library\IdentityServer4\EntityFramework\src\IdentityServer4.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\..\..\Library\IdentityServer4\IdentityServer4\src\IdentityServer4.csproj" />
+    <ProjectReference Include="..\..\..\..\Library\IdentityServer4\Storage\src\IdentityServer4.Storage.csproj" />
+    <ProjectReference Include="..\..\..\Http\Http\src\Microsoft.AspNetCore.Http.csproj" />
+    <ProjectReference Include="..\..\..\Mvc\Mvc.ViewFeatures\src\Microsoft.AspNetCore.Mvc.ViewFeatures.csproj" />
+    <ProjectReference Include="..\..\..\Mvc\Mvc\src\Microsoft.AspNetCore.Mvc.csproj" />
+    <ProjectReference Include="..\..\..\Razor\Razor\src\Microsoft.AspNetCore.Razor.csproj" />
+    <ProjectReference Include="..\..\..\Security\Authentication\JwtBearer\src\Microsoft.AspNetCore.Authentication.JwtBearer.csproj" />
+    <ProjectReference Include="..\..\EntityFrameworkCore\src\Microsoft.AspNetCore.Identity.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\UI\src\Microsoft.AspNetCore.Identity.UI.csproj" />
+  </ItemGroup>
+
+</Project>

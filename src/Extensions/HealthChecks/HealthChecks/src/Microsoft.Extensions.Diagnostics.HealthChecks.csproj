@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Components for performing health checks in .NET applications
+
+Commonly Used Types:
+Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService
+Microsoft.Extensions.Diagnostics.HealthChecks.IHealthChecksBuilder
+    </Description>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>diagnostics;healthchecks</PackageTags>
+    <IsPackable>true</IsPackable>
+    <IsShipping>true</IsShipping>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="$(ExtensionsSharedSourceRoot)NonCapturingTimer\**\*.cs" />
+    <Compile Include="$(ExtensionsSharedSourceRoot)ValueStopwatch\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Hosting\Abstractions\src\Microsoft.Extensions.Hosting.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Logging\Logging.Abstractions\src\Microsoft.Extensions.Logging.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Options\Options\src\Microsoft.Extensions.Options.csproj" />
+    <ProjectReference Include="..\..\Abstractions\src\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

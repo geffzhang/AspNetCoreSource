@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>ASP.NET Core Identity provider that uses Entity Framework Core.</Description>
+    <TargetFrameworks>netstandard2.1</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>aspnetcore;entityframeworkcore;identity;membership</PackageTags>
+    <IsShippingPackage>true</IsShippingPackage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\EntityFrameworkCore\EFCore.Relational\EFCore.Relational.csproj" />
+    <ProjectReference Include="..\..\Extensions.Stores\src\Microsoft.Extensions.Identity.Stores.csproj" />
+  </ItemGroup>
+
+</Project>

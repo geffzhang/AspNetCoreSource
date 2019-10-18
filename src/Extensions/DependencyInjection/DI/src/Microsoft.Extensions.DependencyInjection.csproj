@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection.</Description>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ServiceLookup\ILEmit\**\*.cs" />
+
+    <Compile Include="$(ExtensionsSharedSourceRoot)ParameterDefaultValue\*.cs" />
+    <Compile Include="$(ExtensionsSharedSourceRoot)TypeNameHelper\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DI.Abstractions\src\Microsoft.Extensions.DependencyInjection.Abstractions.csproj" />
+  </ItemGroup>
+</Project>
